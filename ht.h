@@ -350,7 +350,7 @@ void HashTable<K,V,Prober,Hash,KEqual>::insert(const ItemType& p)
         existing->item.second = p.second;
         return;
     }
-     double currLoad = static_cast<double>(numOccupied_ + 1) 
+     double currLoad = static_cast<double>(numOccupied_) 
                       / static_cast<double>(CAPACITIES[mIndex_]);
     if(currLoad >= resizeAlpha_)
     {
